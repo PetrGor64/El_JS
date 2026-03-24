@@ -4,97 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
+
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+
+    <link rel="preload" href="styles/fonts.css" as="style">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/main.css">
+
 </head>
 <body>
-    <header>
+    <header class="top-bar">
+        <h3 class="na1">Name-folio</h3> 
         <nav>
-            <ul>
-                <li><a href="#">Главная</a>  
-                <li><a href="other.html">Блог</a>
+            <ul class="flex-menu">
+                <li><a class="menu_a" href="#">About me</a></li>
+                <li><a class="menu_a" href="other.html">Blog</a></li>
+                <li><a class="menu_a"href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Обо мне</h2>
-            <p>Добро пожаловать! Я веб-разработчик с 5-летним опытом в создании интерактивных интерфейсов. На этом блоге я делюсь своими знаниями, проектами и идеями о том, как технология меняет способ общения людей. Здесь вы найдёте туториалы, кейсы из реальной практики и вдохновляющие истории.</p>
-            <img src="/assets/image2.png">
-        </section>
+<main>
+    <section class="section_top">
+        <div class="top_info">
+            <h1>Hello! I’m Nelsom, a photographer</h1>    
+            <p>Occaecat elit pariatur non Lorem laborum proident Lorem non sint nostrud. Et dolore incididunt mollit nostrud Lorem dolore. Qui aliquip aute amet eu adipisicing velit ullamco nulla sint enim do quis aute</p>
+            <a class="link_skills" href="#skills">More about me</a>
+        </div>
+        <div class="top_img">
+            <img class="img1" src="/assets/image2.png">
+            <img class="img2" src="/assets/myblog.png">
+        </div>
+        
+    </section>
 
-        <section>
-            <h2>Моя карьера</h2>
-            <article>
-                <h3>Текущая должность</h3>
-                <p>Старший веб-разработчик, ООО "DigitalStudio" (2022 — по настоящее время)
-                    <br>Руководство командой из 4 разработчиков, разработка архитектуры фронтенда, менторство младших специалистов, внедрение новых технологий в рабочий процесс.</p>
+    <section class="articles">
+        <article class="art">
+            <div style="background-color: #FEF3EF; max-height: 400px;" >
+                <div class="art_text">
+                    <p style="color: #DB5E31;">Product photography</p>
+                    <h3>Paris secrets</h3>
+                    <p>Sint occaecat deserunt aliquip do occaecat ut quis. Cupidatat magna fugiat quis sit duis est in volup</p>
+                </div>
+            </div>
+            <img class="art_img" src="/assets/art.png">
+        </article>
+        <article class="art">
+            <div style="background-color: #F4FBF4; max-height: 400px;">
+                <div class="art_text">
+                    <p style="color: #61C15C;">Portrait</p>
+                    <h3>Oceanic feeling</h3>
+                    <p>Sint occaecat deserunt aliquip do occaecat ut quis. Cupidatat magna fugiat quis sit duis est in volup</p>
+                </div>
+            </div>
+            <img class="art_img" src="/assets/art.png">
+        </article>
+        <div class="link_posts_d">
+            <a class="link_posts" href="other.html">Browse all posts</a>
+        </div>
+    </section>
+    
+    <section class="skillss">
+        <h2 id="skills">My skills</h2>
+        <div class="skill_grid">
+            <div>
+                <p>Photography</p>
+                <hr>
+            </div>
+            <div>
+                 <p>Graphic Design</p>
+                <hr>
+            </div>
+            <div>
+                <p>Creativity</p>
+                <hr>
+            </div>
+            <div>
+                <p>Brand Identity</p>
+                <hr>
+            </div>
+            <div>
+                <p>Copy Writing</p>
+                <hr>
+            </div>
+            <div>
+                <p>Team Working</p>
+                <hr>
+            </div>
+        </div>
+    </section>
+
+    <section class="mywork">
+        <div>
+            <h2>My work</h2>
+            <p>Duis nisi do exercitation in irure aliqua commodo nisi eu id reprehenderit dolore fugiat consectetur irure</p>
+        </div>
+        <div class="articles_work">
+            <article class="work">
+                <img  class="work_img" src="/assets/graph.png">
+                <div>
+                    <p>Consectetur - (2016 - 2017)</p>
+                    <h4 class="h4-regular">Graphic design<h4>
+                    <p>Nostrud tempor cillum sunt excepteur do ut proident deserunt enim consequat exercitatio</p>
+                </div>
             </article>
-            <article>
-                <h3>Опыт работы:</h3>
-                
-                <p><strong>Веб-разработчик, ООО "CreativeAgency" (2019 — 2022)</strong> <br> Создание корпоративных сайтов и веб-приложений на React и Vue.js, оптимизация производительности, работа с клиентами и сбор требований.</p>
-                <p><strong>Фронтенд-разработчик, Стартап "TechVenture" (2018 — 2019)</strong> <br> Разработка пользовательского интерфейса для платформы e-learning, работа с REST API и веб-стандартами.</p>
-                <p><strong>Интернет-стажёр, Веб-студия "WebMasters" (2017 — 2018)</strong> <br> Первый опыт в профессиональной разработке, участие в создании и поддержке различных проектов.</p>
+            <hr>
+            <article class="work">
+                <img  class="work_img" src="/assets/phot.png">
+                <div>
+                    <p>Bibendum - (2017 - 2020)</p>
+                    <h4 class="h4-regular">Photographer<h4>
+                    <p>Ad do dolore cillum dolor et ex non dolor qui. Dolor amet tempor pariatur officia pariatur et</p>
+                </div>
             </article>
-            <article>
-                <h3>Образование:</h3>
-                <p><strong>Государственный Технический Университет, 2013 — 2017</strong></p>
-                <p>Бакалавриат по специальности "Информатика и вычислительная техника"<br> Выпускная работа: "Оптимизация загрузки веб-страниц на мобильных устройствах"</p>
+            <hr>
+            <article class="work">
+                <img  class="work_img" src="/assets/assist.png">
+                <div>
+                    <p>Adipiscing - (2020 - 2022)</p>
+                    <h4 class="h4-regular">Photographer’s Assistant<h4>
+                    <p>Ad do dolore cillum dolor et ex non dolor qui. Dolor amet tempor pariatur officia pariatur et</p>
+                </div>
             </article>
-            <article>
-                <h3>Курсы и сертификации:</h3>
-                <ul>
-                    <li>Advanced React Development — Coursera (2023)
-                    <li>UX/UI Design Fundamentals — Skillbox (2021)
-                    <li>Web Performance Optimization — Frontend Masters (2022)
-                    <li>Google Analytics Certification (2020)
-                </ul>
-            </article>
-            <article>
-                <h3>Навыки:</h3>
-                <ul>
-                    <li>Программирование: JavaScript, TypeScript, React, Vue.js, HTML5, CSS3, Node.js
-                    <li>Инструменты: Git, Webpack, Docker, Figma, VS Code
-                    <li>Методологии: Agile, Scrum, Test-Driven Development
-                </ul>
-            </article>
-            <article>
-                <h3>Достижения:</h3>
-                <ul>
-                    <li>Разработал платформу для управления проектами, которой пользуются более 500 компаний
-                    <li>Снизил время загрузки сайта на 60% благодаря оптимизации и внедрению современных стандартов
-                    <li>Провёл более 20 воркшопов и мастер-классов для начинающих разработчиков
-                    <li>Организовал две конференции "Web Technologies Conference" в своем городе
-                </ul>
-            </article>
-        </section>
-        <section>
-            <h2>Последние статьи</h2>
-            <article>
-                <h3>Как создать адаптивный дизайн за 30 минут</h3>
-                <p>Опубликовано: 15 декабря 2024</p>
-                <p>В этой статье я расскажу о ключевых принципах создания мобильных интерфейсов, которые одинаково хорошо выглядят на всех устройствах. Вы узнаете о медиа-запросах, гибких сетках и практических примерах кода, которые можно использовать прямо сейчас.</p>
-            </article>
-            <article>
-                <h3>Как создать адаптивный дизайн за 30 минут</h3>
-                <p>Опубликовано: 15 декабря 2024</p>
-                <p>В этой статье я расскажу о ключевых принципах создания мобильных интерфейсов, которые одинаково хорошо выглядят на всех устройствах. Вы узнаете о медиа-запросах, гибких сетках и практических примерах кода, которые можно использовать прямо сейчас.</p>
-            </article>
-            <article>
-                <h3>Как создать адаптивный дизайн за 30 минут</h3>
-                <p>Опубликовано: 15 декабря 2024</p>
-                <p>В этой статье я расскажу о ключевых принципах создания мобильных интерфейсов, которые одинаково хорошо выглядят на всех устройствах. Вы узнаете о медиа-запросах, гибких сетках и практических примерах кода, которые можно использовать прямо сейчас.</p>
-            </article>
-            <li><a href="other.html">Посмотреть все статьи</a>
-        </section>
+            <hr>
+        </div>
+    </section>
+
+    <section class="hobby">
+        <div>
+            <h2>Hobby projects</h2>
+            <div class="hobby_left">
+                <div class="img_container">
+                    <img class="hobby_img" src="/assets/mock img 2.png">
+                    <div class="over">
+                        <div class="text">
+                            <h3>Hobby project name</h3>
+                            <p>Duis nisi do exercitation in irure aliqua commodo nisi eu id reprehenderit dolore fugiat consectetur irure labore est ea.</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="hobby_img" src="/assets/mock img 1.png">
+            </div>
+        </div>
+        <div class="hobby_right">
+            <p>Duis nisi do exercitation in irure aliqua commodo nisi eu id reprehenderit dolore fugiat consectetur irure labore est ea.</p>
+            <img class="hobby_img2" src="/assets/art.png">
+            <img class="hobby_img2" src="/assets/art.png">
+        </div>
+    </section>
 
     </main>
+    
     <footer>
-        <h2>Контакты</h2>
-        <p>Email: alex@creativeblog.ru</p>
-        <p>Телефон: +7 (999) 123-45-67</p>
-        <h3>Социальные сети:</h3>
-        <p>Instagram | Twitter | Linkedln | Github</p>
+        <div class="footer_left">
+            <h2 id="contact">Say hello and let's work together !</h2>
+            <p>Email: <a href="mailto:alex@creativeblog.ru">alex@creativeblog.ru</a></p>
+            <p style="margin-bottom: 50px;">Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a> </p>
+            <img src="/assets/contacts.png">
+            <p style="margin-top: 140px;">© 2026 Brand, Inc</p>
+        </div>
+        <div class="footer_right">
+            <label for="email">Email</label>
+            <input type="email" required placeholder="Your email address">
+            <label for="message">Input your message</label>
+            <textarea placeholder="Describe your project" rows="5"></textarea>
+            <button>Submit</button>
+        </div>
     </footer>
 </body>
 </html>
