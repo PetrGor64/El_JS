@@ -1,0 +1,79 @@
+.footer{
+    background-color: var(--d-color);
+    color: var(--top-bar-color);
+}
+
+.footer-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.contact-info{
+    padding: 40px 0px 0px 50px;
+}
+
+.send-email{
+    display: flex;
+    flex-direction: column;
+    padding: 70px 50px 0px 0px;
+}
+
+footer a{
+    color: var(--top-bar-color);
+}
+
+footer input{
+    margin: 10px 0px 25px 0px;
+    width: 400px;
+    min-height: 50px;
+    font-size: 16px;
+    border: 2px solid var(--footer-color);
+    border-radius: 4px;
+    color: var(--footer-color);
+    background-color: var(--d-color);
+}
+
+footer textarea{
+    margin: 10px 0px 0px 0px;
+    width: 400px;
+    font-size: 16px;
+    border: 2px solid var(--footer-color);
+    border-radius: 4px;
+    color: var(--footer-color);
+    background-color: var(--d-color);
+    
+}
+
+footer button{
+    margin: 25px 0px 0px 0px;
+    background-color: var(--g-color);
+    color: var(--top-bar-color);
+    height: 50px;
+    width: 200px;
+    border: 2px solid var(--g-color);
+    border-radius: 5px;
+}
+
+footer button:hover{
+    background-color: var(--d-color);
+    color: var(--g-color);
+    height: 50px;
+    width: 200px;
+    font-weight: 700;
+    border: 2px solid var(--g-color);
+    border-radius: 5px;
+}
+
+.footer_links{
+    margin-bottom: 50px;
+}
+
+.footer_brand{
+    margin-top: 140px;
+}
