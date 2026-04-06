@@ -14,20 +14,23 @@
 </head>
 <body>
     <header class="top-bar">
-        <h3 class="na1">Name-folio</h3> 
-        <nav>
+        <dev class="top-bar-container">
+            <h3 class="na1">Name-folio</h3> 
+            <nav>
             <ul class="flex-menu">
                 <li><a class="menu_a" href="#">About me</a></li>
                 <li><a class="menu_a" href="other.html">Blog</a></li>
                 <li><a class="menu_a"href="#contact">Contact</a></li>
             </ul>
-        </nav>
+            </nav>
+        </dev>
     </header>
 
 <main>
-    <section class="section_top">
+<div class="aboutme-container">
+        <section class="section_top">
         <div class="top_info">
-            <h1>Hello! I’m Nelsom, a photographer</h1>    
+            <h1 class="site-title">Hello! I’m Nelsom, a photographer</h1>    
             <p>Occaecat elit pariatur non Lorem laborum proident Lorem non sint nostrud. Et dolore incididunt mollit nostrud Lorem dolore. Qui aliquip aute amet eu adipisicing velit ullamco nulla sint enim do quis aute</p>
             <a class="link_skills" href="#skills">More about me</a>
         </div>
@@ -35,29 +38,30 @@
             <img class="img1" src="assets/image2.png" alt="">
             <img class="img2" src="assets/myblog.png" alt="">
         </div>
-        
     </section>
 
-    <section class="articles">
-        <article class="art">
-            <div style="background-color: #FEF3EF; max-height: 400px;" >
-                <div class="art_text">
-                    <p style="color: #DB5E31;">Product photography</p>
-                    <h3>Paris secrets</h3>
-                    <p>Sint occaecat deserunt aliquip do occaecat ut quis. Cupidatat magna fugiat quis sit duis est in volup</p>
-                </div>
+    <section class="main-article-list">
+        <article class="main-article">
+            <div class="art-backcolor main-article-text">
+                <p class="art-title">Product photography</p>
+                <h3>Paris secrets</h3>
+                <p>Sint occaecat deserunt aliquip do occaecat ut quis. Cupidatat magna fugiat quis sit duis est in volup</p>
+                <p>Опубликовано: <time datetime="2026-03-24">Mar 24, 2026</time></p>
             </div>
-            <img class="art_img" src="assets/art.png" alt="">
+            <div class=".main-article-img">
+                <img class="art_img" src="assets/art.png" alt="">
+            </div>
         </article>
-        <article class="art">
-            <div style="background-color: #F4FBF4; max-height: 400px;">
-                <div class="art_text">
-                    <p style="color: #61C15C;">Portrait</p>
-                    <h3>Oceanic feeling</h3>
-                    <p>Sint occaecat deserunt aliquip do occaecat ut quis. Cupidatat magna fugiat quis sit duis est in volup</p>
-                </div>
+        <article class="main-article">
+            <div class="art-backcolor main-article-text">
+                <p class="art-title">Product photography</p>
+                <h3>Paris secrets</h3>
+                <p>Sint occaecat deserunt aliquip do occaecat ut quis. Cupidatat magna fugiat quis sit duis est in volup</p>
+                <p>Опубликовано: <time datetime="2026-03-24">Mar 24, 2026</time></p>
             </div>
-            <img class="art_img" src="assets/art.png" alt="">
+            <div class=".main-article-img">
+                <img class="art_img" src="assets/art.png" alt="">
+            </div>
         </article>
         <div class="link_posts_d">
             <a class="link_posts" href="other.html">Browse all posts</a>
@@ -131,44 +135,52 @@
     </section>
 
     <section class="hobby">
-        <div>
-            <h2>Hobby projects</h2>
-            <div class="hobby_left">
-                <div class="img_container">
-                    <img class="hobby_img" src="assets/mock img 2.png" alt="">
-                    <div class="over">
-                        <div class="text">
-                            <h3>Hobby project name</h3>
-                            <p>Duis nisi do exercitation in irure aliqua commodo nisi eu id reprehenderit dolore fugiat consectetur irure labore est ea.</p>
-                        </div>
+        <div class="hobby-title">
+            <h2 class="hobby-title-item1">Hobby projects</h2>
+            <p class="hobby-title-item2">Duis nisi do exercitation in irure aliqua commodo nisi eu id reprehenderit dolore fugiat consectetur irure labore est ea.</p>
+        </div>
+        <div class="hobby-grid-container">
+            <div class="hobby-item img_container">
+                <img class="hobby_img" src="assets/mock img 2.png" alt="">
+                <div class="over">
+                    <div class="hobby-text">
+                        <h3>Hobby project name</h3>
+                        <p>Duis nisi do exercitation in irure aliqua commodo nisi eu id reprehenderit dolore fugiat consectetur irure labore est ea.</p>
                     </div>
                 </div>
+            </div>
+            <div class="hobby-item">
                 <img class="hobby_img" src="assets/mock img 1.png" alt="">
             </div>
-        </div>
-        <div class="hobby_right">
-            <p>Duis nisi do exercitation in irure aliqua commodo nisi eu id reprehenderit dolore fugiat consectetur irure labore est ea.</p>
-            <img class="hobby_img2" src="assets/art.png" alt="">
-            <img class="hobby_img2" src="assets/art.png" alt="">
+            <div class="hobby-item">
+                <img class="hobby_img2" src="assets/hobby_example.png" alt="">
+            </div>
+            <div class="hobby-item">
+                <img class="hobby_img2" src="assets/hobby_example.png" alt="">
+            </div> 
         </div>
     </section>
+</div>
 
-    </main>
+
+</main>
     
-    <footer>
-        <div class="footer_left">
-            <h2 id="contact">Say hello and let's work together !</h2>
-            <p>Email: <a href="mailto:alex@creativeblog.ru">alex@creativeblog.ru</a></p>
-            <p style="margin-bottom: 50px;">Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a> </p>
-            <img src="assets/contacts.png" alt="">
-            <p style="margin-top: 140px;">© 2026 Brand, Inc</p>
-        </div>
-        <div class="footer_right">
-            <label for="email">Email</label>
-            <input type="email" required placeholder="Your email address">
-            <label for="message">Input your message</label>
-            <textarea placeholder="Describe your project" rows="5"></textarea>
-            <button>Submit</button>
+    <footer class="footer">
+        <div class="footer-container footer-content">
+            <section class="contact-info">
+                <h2 id="contact">Say hello and let's work together !</h2>
+                <p>Email: <a href="mailto:alex@creativeblog.ru">alex@creativeblog.ru</a></p>
+                <p class="footer_links">Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a> </p>
+                <img src="assets/contacts.png" alt="">
+                <p class="footer_brand">© 2026 Brand, Inc</p>
+            </section>
+            <section class="send-email">
+                <label for="email">Email</label>
+                <input type="email" required placeholder="Your email address">
+                <label for="message">Input your message</label>
+                <textarea placeholder="Describe your project" rows="5"></textarea>
+                <button>Submit</button>
+            </section>
         </div>
     </footer>
 </body>
