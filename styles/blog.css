@@ -1,3 +1,6 @@
+@import url(./blog_admin_panel.css);
+@import url(./stats.css);
+
 .blog-container{
     max-width: 1200px;
     margin: 0 auto;
@@ -93,7 +96,112 @@
         grid-gap: 36px;
         margin: 20px 50px 50px 50px;
     }
-    .blog-article:first-child {
+    .blog-article:first-child{
         grid-column: span 1;
     }
 }
+
+.create-article-container{
+    overflow: hidden;
+    margin: 50px;
+    color: var(--d-color);
+    grid-gap: 50px;
+}
+
+@keyframes showContainer{
+    from{
+        height: 0;
+    }
+    to{
+        height: 415px;
+    }
+}
+
+@keyframes hideContainer{
+    from{
+        height: 415px;
+    }
+    to{
+        height: 0;
+    }
+}
+
+.create-article-container:not([data-hidden]){
+    animation: showContainer 250ms ease both;
+    height: 415px;
+}
+
+.create-article-container[data-hidden]{
+    animation: hideContainer 150ms ease;
+    height: 0;
+}
+.create-article-flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.create-article-buttons-flex{
+    margin: 25px 0px 0px 0px;
+    display: flex;
+    gap: 20px;
+}
+
+.title_input{
+    margin: 10px 0px 15px 0px;
+    min-height: 50px;
+    font-size: 16px;
+    border: 2px solid var(--d-color);
+    border-radius: 5px;
+    color: var(--d-color);
+}
+
+.article_textarea{
+    margin: 10px 0px 0px 0px;
+    font-size: 16px;
+    border: 2px solid var(--d-color);
+    border-radius: 5px;
+    color: var(--d-color);
+}
+
+.article-create-button{
+    background-color: var(--g-color);
+    color: var(--top-bar-color);
+    height: 50px;
+    width: 200px;
+    border: 2px solid var(--g-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.article-create-button:hover{
+    background-color: var(--w-color);
+    color: var(--d-color);
+    height: 50px;
+    width: 200px;
+    font-weight: 700;
+    border: 2px solid var(--d-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.article-cancel-button{
+    background-color: var(--w-color);
+    color: var(--g-color);
+    height: 50px;
+    width: 200px;
+    border: 2px solid var(--g-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.article-cancel-button:hover{
+    background-color: var(--w-color);
+    color: var(--d-color);
+    height: 50px;
+    width: 200px;
+    font-weight: 700;
+    border: 2px solid var(--d-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
