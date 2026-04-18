@@ -1,0 +1,61 @@
+.admin_panel{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    z-index: 2;
+    background-color: var(--top-bar-color);
+
+    width: 48px;
+    height: 113px;
+
+    border-radius: 24px 0 0 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.admin_button{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--top-bar-color);
+    color: var(--top-bar-color);
+    border: 1px solid var(--top-bar-color);
+    cursor: pointer;
+}
+
+.create_button:hover::after {
+    content: "Добавить статью";
+    position: absolute;
+    right: 48px;
+    background-color: var(--d-color);
+    color: var(--top-bar-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.stats_button:hover::after {
+    
+    content: "Статистика";
+    position: absolute;
+    right: 48px;
+    background-color: var(--d-color);
+    color: var(--top-bar-color);
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    pointer-events: none;
+}

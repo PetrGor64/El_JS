@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Блог</title>
 
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
 
     <link rel="preload" href="styles/fonts.css" as="style">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/admin_panel.js"defer></script>
 
 </head>
 <body class="body-text-blog">
@@ -28,6 +29,14 @@
     </header>
 
     <main>
+        <div class="admin_panel">
+            <button id="admin_create_button" class="admin_button create_button">
+                <img src="assets/create_icon.png" alt="">
+            </button>
+            <button id="admin_stats_button" class="admin_button stats_button" type="button">
+                <img src="assets/stats_icon.png" alt="">
+            </button>
+        </div>
         <div class="blog-container">
         <section class="myblog">
             <div class="myblog_text">
@@ -39,8 +48,17 @@
             </div>
         </section> 
 
-        <section class="article-container">
-            <article class="blog-article">
+        <dialog id="statsDialog">
+            <button data-close class="close_btn">×</button>
+            <h3 class="stats-title">Статистика страницы</h3>
+            <div class="stats-card">
+                <p>Всего статей:</p>
+                <span id="articlesCount">0</span>
+            </div>
+        </dialog>
+
+        <section id="blog_article_list" class="article-container">
+            <article id="blog_article" class="blog-article">
                 <div class="blog-article-img">
                     <img src="assets/art.png" alt="">
                 </div>
@@ -50,7 +68,7 @@
                     <time datetime="2026-03-24">Mar 24, 2026</time>
                 </div>
             </article>
-            <article class="blog-article">
+            <article id="blog_article" class="blog-article">
                 <div class="blog-article-img">
                     <img src="assets/art.png" alt="">
                 </div>
@@ -60,7 +78,7 @@
                     <time datetime="2026-03-24">Mar 24, 2026</time>
                 </div>
             </article>
-            <article class="blog-article">
+            <article id="blog_article" class="blog-article">
                 <div class="blog-article-img">
                     <img src="assets/art.png" alt="">
                 </div>
@@ -70,7 +88,7 @@
                     <time datetime="2026-03-24">Mar 24, 2026</time>
                 </div>
             </article>
-            <article class="blog-article">
+            <article id="blog_article" class="blog-article">
                 <div class="blog-article-img">
                     <img src="assets/art.png" alt="">
                 </div>
@@ -80,7 +98,7 @@
                     <time datetime="2026-03-24">Mar 24, 2026</time>
                 </div>
             </article>
-            <article class="blog-article">
+            <article id="blog_article" class="blog-article">
                 <div class="blog-article-img">
                     <img src="assets/art.png" alt="">
                 </div>
@@ -90,7 +108,7 @@
                     <time datetime="2026-03-24">Mar 24, 2026</time>
                 </div>
             </article>
-            <article class="blog-article">
+            <article id="blog_article" class="blog-article">
                 <div class="blog-article-img">
                     <img src="assets/art.png" alt="">
                 </div>
@@ -100,7 +118,7 @@
                     <time datetime="2026-03-24">Mar 24, 2026</time>
                 </div>
             </article>
-            <article class="blog-article">
+            <article id="blog_article" class="blog-article">
                 <div class="blog-article-img">
                     <img src="assets/art.png" alt="">
                 </div>
@@ -110,8 +128,35 @@
                     <time datetime="2026-03-24">Mar 24, 2026</time>
                 </div>
             </article>
+            <template id="article_tmp">
+                <article id="blog_article" class="blog-article">
+                <div class="blog-article-img">
+                    <img src="assets/art.png" alt="">
+                </div>
+                <div class="blog-article-text">
+                    <h4 class="blog-article-title">Minim anim pariatur magna duis sit et dolor inci</h4>
+                    <p class="blog-article-description">Sint occaecat deserunt aliquip do occaecat ut quis. Cupidatat magna fugiat quis sit duis est in volup</p>
+                    <time class="blog-time"  datetime="2026-03-24">Mar 24, 2026</time>
+                </div>
+            </article>
+            </template>
+        </section>
+        <section class="create-article-container" data-hidden hidden>
+            <div style="min-height: 0;"></div>
+            <h3>Добавить статью</h3>
+            <section class="create-article-flex">
+                <label for="title">Заголовок</label>
+                <input class="title_input" type="text" id="title" required placeholder="Заголовок статьи">
+                <label for="message">Текст статьи</label>
+                <textarea class="article_textarea" required placeholder="Текст статьи" rows="5"></textarea>
+                <div class="create-article-buttons-flex">
+                    <button class="article-create-button" id="add_article_button">Добавить</button>
+                    <button class="article-cancel-button" id="user_close_button">Отмена</button>
+                </div>
+            </section>
         </section>
         </div>
+
     </main>
 
     <footer class="footer">
